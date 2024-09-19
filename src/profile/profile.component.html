@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="profile-container">
+    <div class="profile-card">
+      <h2 class="profile-header">Welcome, {{ user?.data.name || 'Guest' }}!</h2>
+      <p>Email: {{ user?.data.email || 'N/A' }}</p>
+  
+      <div class="profile-actions">
+        <button (click)="logout()">Logout</button>
+       
+      </div>
+    </div>
+  </div>
+  

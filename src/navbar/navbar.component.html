@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="navbar-container">
+      <a class="logo" routerLink="/">MyApp</a>
+      <ul class="nav-links">
+        <li><a routerLink="/Home">Home</a></li>
+  
+        <!-- Show Login when user is not logged in -->
+        <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+  
+        <!-- Show Register when user is not logged in -->
+        <li *ngIf="!isLoggedIn"><a routerLink="/register">Register</a></li>
+  
+        <!-- Show Profile when user is logged in -->
+        <li *ngIf="isLoggedIn"><a routerLink="/profile">Profile</a></li>
+  
+        <!-- Show Logout when user is logged in -->
+        <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  
